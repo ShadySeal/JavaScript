@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2</title>
+</head>
+<body>
+    <p id="target"></p>
+    <ol id="list"></ol>
+<script>
+      const participants = +prompt('Number of participants.');
+      const list = [];
+      for (i = 0; i < participants; i++) {
+        const name = prompt('Participants names.');
+        list.push(name);
+      }
+      list.sort();
+      var html = "";
+      for (var i =0; i < list.length; i++) {
+        html += "<li>" + list[i]+ "</li>";
+      }
+      document.querySelector('#target').innerHTML = html;
+</script>
+</body>
+</html>

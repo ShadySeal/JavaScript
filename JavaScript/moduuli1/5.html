@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>5</title>
+</head>
+<body>
+    <p id="target"></p>
+<script>
+      const year = prompt('Anna vuosi');
+      if ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+        document.querySelector('#target').innerHTML = year + ' on karkausvuosi.';
+    } else {
+        document.querySelector('#target').innerHTML = year + ' ei ole karkausvuosi.';
+    }
+</script>
+</body>
+</html>

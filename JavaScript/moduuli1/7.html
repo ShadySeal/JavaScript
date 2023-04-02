@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>7</title>
+</head>
+<body>
+    <p id="target"></p>
+<script>
+      const roll = prompt('How many times should I roll the dice?');
+      let i = 0;
+      var sum = 0;
+      while (i < roll ){
+        var number = Math.floor(Math.random() * 6) + 1;
+        sum = sum + number;
+        i = i + 1;
+      }
+      document.querySelector('#target').innerHTML = sum;
+</script>
+</body>
+</html>

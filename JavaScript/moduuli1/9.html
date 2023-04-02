@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>9</title>
+</head>
+<body>
+    <p id="target"></p>
+<script>
+    const number = parseInt(prompt("Enter a positive number: "));
+    let isPrime = true;
+
+    if (number === 1) {
+        document.querySelector('#target').innerHTML = "Cannot use 1.";
+    }
+
+    else if (number > 1) {
+
+        for (let i = 2; i < number; i++) {
+            if (number % i == 0) {
+                isPrime = false;
+                break;
+            }
+        }
+
+        if (isPrime) {
+            document.querySelector('#target').innerHTML = number + " is a prime number";
+        } else {
+            document.querySelector('#target').innerHTML = number + " is a not prime number";
+        }
+    }
+
+    else {
+        console.log("The number is not a prime number.");
+    }
+</script>
+</body>
+</html>

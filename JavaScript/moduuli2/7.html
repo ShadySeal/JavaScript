@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>7</title>
+</head>
+<body>
+    <p id="target"></p>
+    <ul id="list"></ul>
+    <script>
+        function rollDice(sides) {
+            return Math.floor(Math.random() * sides) + 1;
+        }
+
+        const maxNumber = prompt("Enter the maximum number on the dice:");
+        const dice = [];
+        while (true) {
+            let roll = rollDice(maxNumber);
+            dice.push(roll);
+            if (roll == maxNumber) {
+                break;
+            }
+        }
+
+        const list = document.querySelector('#list');
+        for (let i = 0; i < dice.length; i++) {
+            list.innerHTML += `<li>${dice[i]}</li>`;
+        }
+    </script>
+</body>
+</html>

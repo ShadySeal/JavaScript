@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>3</title>
+</head>
+<body>
+    <p id="target"></p>
+    <ul id="list"></ul>
+<script>
+      const dogs = [];
+      const dog1 = prompt('Enter a name for a dog.');
+      dogs.push(dog1);
+      const dog2 = prompt('Enter a another.');
+      dogs.push(dog2);
+      const dog3 = prompt('Enter third.');
+      dogs.push(dog3);
+      const dog4 = prompt('Enter fourth.');
+      dogs.push(dog4);
+      const dog5 = prompt('Enter fifth.');
+      dogs.push(dog5);
+      const dog6 = prompt('Enter sixth.');
+      dogs.push(dog6);
+      dogs.sort();
+      dogs.reverse();
+
+      const list = document.querySelector('#list');
+
+      for (var i = 0; i < dogs.length; i++) {
+        list.innerHTML += `<li>${dogs[i]}</li>`;
+      }
+</script>
+</body>
+</html>

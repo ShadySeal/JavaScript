@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>8</title>
+</head>
+<body>
+    <p id="target"></p>
+</body>
+<h1>Leap Year</h1>
+Leap years between <span id="start"></span> and <span id="end"></span>
+<ul id="leapYears">
+
+</ul>
+<script>
+      const start = +prompt('Start year');
+      const end = parseInt(prompt('End year.'));
+
+      document.querySelector('#start').innerHTML = start.toString();
+      document.querySelector('#end').innerHTML = end.toString();
+
+      const leapYearsElement = document.querySelector('#leapYears');
+      for (let year = start; year <= end; year++) {
+        if ((year % 400 == 0) || ((year % 4 == 0) && year % 100 !== 0)) {
+            console.log(year)
+            leapYearsElement.innerHTML += `<li>${year}</li>`;
+        }
+      }
+</script>
+</html>
